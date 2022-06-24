@@ -1,0 +1,51 @@
+﻿<Window x:Class="CarService.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarService"
+        mc:Ignorable="d"
+        Title="Автосервис" Height="403" Width="616.48" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="327*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="11*"/>
+        </Grid.RowDefinitions>
+        <Menu VerticalAlignment="Top" Height="24">
+            <MenuItem Header="Справочники">
+                <MenuItem Header="ВидыРабот" Click="WinJobs_Click"></MenuItem>
+                <MenuItem Header="Исполнители" Click="Performers_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Поиск" Click="Find_Click"></MenuItem>
+            <MenuItem Header="Запросы">
+                <MenuItem Header="Вывод сведений о стоимости выполненных работ по исполнителям." Click="RequestOne_Click"></MenuItem>
+                <MenuItem Header="Вывод сведений о стоимости заказов по каждому клиенту." Click="RequestTwo_Click"></MenuItem>
+                <MenuItem Header="Добавление данных об исполнителях." Click="RequestThree_Click"></MenuItem>
+                <MenuItem Header="Подсчет количества заказов по каждой марке автомобиля." Click="RequestFour_Click"></MenuItem>
+                <MenuItem Header="Подсчет количества заказов в день." Click="RequestFive_Click"></MenuItem>
+                <MenuItem Header="Просмотр полных данных о заказах,сделанных в первом квартале текущего года." Click="RequestSix_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Добавить" Click="Add_Click"></MenuItem>
+            <MenuItem Header="Изменить" Click="Edit_Click"></MenuItem>
+            <MenuItem Header="Удалить" Click="Delete_Click"></MenuItem>
+            <MenuItem Header="Выход" Click="Exit_Click"></MenuItem>
+        </Menu>
+        <DataGrid x:Name="DataGrid" Margin="0,39,0,11" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding НомерЗаказа}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Дата заказа" Binding="{Binding Дата}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding ФИО}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Марка автомобиля" Binding="{Binding МаркаАвтомобиля}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Работа" Binding="{Binding НаименованиеРаботы}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding СтоимостьРаботы}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Исполнитель" Binding="{Binding Expr1}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Адрес клиента" Binding="{Binding Адрес}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Телефон клиента" Binding="{Binding Телефон}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="find" HorizontalAlignment="Left" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" Height="29" FontSize="16" Margin="191,9,0,0"/>
+        <Label Content="Найти:" HorizontalAlignment="Left" Margin="94,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="66" Height="29" FontSize="16"/>
+        <Button Content="Найти" HorizontalAlignment="Left" Margin="414,0,0,0" Grid.Row="1" VerticalAlignment="Center" Height="29" Width="110" FontSize="16" Click="Find_Click"/>
+    </Grid>
+</Window>

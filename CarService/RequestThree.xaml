@@ -1,0 +1,22 @@
+﻿<Window x:Class="CarService.RequestThree"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarService"
+        mc:Ignorable="d"
+        Title="RequestThree" Height="259" Width="476" Loaded="Window_Loaded">
+    <Grid Margin="0,0,0,-6">
+        <DataGrid x:Name="DataGridThree" HorizontalAlignment="Center" Height="144" Margin="0,10,0,0" VerticalAlignment="Top" Width="456" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Код исполнителя" Binding="{Binding КодИсполнителя}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ФИО" Binding="{Binding ФИО}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="id" HorizontalAlignment="Left" Margin="66,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" Height="24"/>
+        <TextBox x:Name="fio" HorizontalAlignment="Left" Margin="299,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" Height="24"/>
+        <Label Content="Код" HorizontalAlignment="Left" Margin="22,159,0,0" VerticalAlignment="Top"/>
+        <Label Content="ФИО" HorizontalAlignment="Left" Margin="238,160,0,0" VerticalAlignment="Top"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="173,191,0,0" VerticalAlignment="Top" Height="21" Width="93" Click="Add_Click"/>
+    </Grid>
+</Window>

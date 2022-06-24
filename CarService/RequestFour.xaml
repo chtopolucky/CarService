@@ -1,0 +1,17 @@
+﻿<Window x:Class="CarService.RequestFour"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarService"
+        mc:Ignorable="d"
+        Title="RequestFour" Height="267" Width="542" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="DataGridFour" HorizontalAlignment="Center" Height="220" Margin="0,10,0,0" VerticalAlignment="Top" Width="522" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Марка автомобиля" Binding="{Binding МаркаАвтомобиля}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Количество заказов" Binding="{Binding КоличествоЗаказов}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="efd69a930b96401793639bfbfa482331" Name="Diagram1">
+        <EntityTypeShape EntityType="АвтоСервисModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="АвтоСервисModel.ВидыРаботы" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="АвтоСервисModel.Заказы" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="АвтоСервисModel.Исполнители" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="АвтоСервисModel.Клиенты" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <AssociationConnector Association="АвтоСервисModel.FK_Заказы_ВидыРаботы" ManuallyRouted="false" />
+        <AssociationConnector Association="АвтоСервисModel.FK_Заказы_Исполнители" ManuallyRouted="false" />
+        <AssociationConnector Association="АвтоСервисModel.FK_Заказы_Клиенты" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
